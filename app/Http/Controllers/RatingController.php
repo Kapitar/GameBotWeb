@@ -16,8 +16,6 @@ class RatingController extends Controller
     	$usersInfo = array();
     	$balances = array();
 
-    	$token = 'cbcc0a81cbcc0a81cbcc0a81a9cbbf1e0bccbcccbcc0a8194ddbec860def5b41b7a74d7';
-
     	for ($i=0; $i < 10 ; $i++) { 
     		$result = json_decode(file_get_contents("https://api.vk.com/method/users.get?user_ids=". $users[$i]->user_id ."&fields=first_name&fields=uid,first_name,last_name&access_token=".$token."&v=5.120"), true);
 
