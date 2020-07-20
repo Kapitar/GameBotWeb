@@ -13,6 +13,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+	'/',
+	'HomeController@index'
+)->name('index');
+
+Route::get(
+	'home',
+	'HomeController@home'
+)->name('home');
+
+Route::get(
+	'u/{id}',
+	'ProfileController@showProfile'
+)->name('profile');
+
+Route::get(
+	'profile404',
+	'ProfileController@error404'
+)->name('profile404');
+
+Route::get(
+	'u/{id}',
+	'ProfileController@showProfile'
+)->name('profile');
+
+Route::get(
+	'rating',
+	'RatingController@rating'
+)->name('rating');
+
+Route::get(
+	'loadRating',
+	'RatingController@loadRating'
+)->name('loadRating');
+
+Route::get(
+	'auth',
+	'VkController@auth'
+)->name('vk_auth');
+
+Route::get(
+	'logout',
+	'HomeController@logout'
+)->name('logout');
