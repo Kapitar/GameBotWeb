@@ -8,10 +8,6 @@ class VkController extends Controller
 {
     public function auth(Request $request) {
 
-    	$id = "7541898";
-    	$secret = "0GIjZK4NjXRSiufUsPtu";
-    	$url = "https://gamebot.site/auth";
-
     	if (!$_GET['code']) {
     		exit("error code");
     	}
